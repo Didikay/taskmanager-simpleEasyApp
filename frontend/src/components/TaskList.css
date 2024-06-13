@@ -1,0 +1,7 @@
+.task-not-completed {
+  background-color: rgba(255, 0, 0, 0.1); /* Przezroczysty czerwony kolor */
+}
+
+.task-completed {
+  background-color: rgba(0, 255, 0, 0.1); /* Jasnozielony kolor */
+}
