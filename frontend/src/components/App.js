@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/tasks")
+      .get("http://localhost:4000/tasks")
       .then((response) => {
         setTasks(response.data);
       })
@@ -19,7 +19,7 @@ function App() {
 
   const addTask = (task) => {
     axios
-      .post("http://localhost:5000/tasks", task)
+      .post("http://localhost:4000/tasks", task)
       .then((response) => {
         setTasks([...tasks, response.data]);
       })
@@ -30,7 +30,7 @@ function App() {
 
   const updateTask = (updatedTask) => {
     axios
-      .put(`http://localhost:5000/tasks/${updatedTask.id}`, updatedTask)
+      .put(`http://localhost:4000/tasks/${updatedTask.id}`, updatedTask)
       .then((response) => {
         setTasks(
           tasks.map((task) =>
@@ -45,7 +45,7 @@ function App() {
 
   const deleteTask = (taskId) => {
     axios
-      .delete(`http://localhost:5000/tasks/${taskId}`)
+      .delete(`http://localhost:4000/tasks/${taskId}`)
       .then(() => {
         setTasks(tasks.filter((task) => task.id !== taskId));
       })
