@@ -66,6 +66,8 @@ jobs:
 
       - name: Deploy to Kubernetes
         run: |
+          kubectl cluster-info
+          kubectl get nodes
           kubectl apply -f k8s/backend-deployment.yaml --validate=false
           kubectl apply -f k8s/backend-service.yaml --validate=false
           kubectl apply -f k8s/frontend-deployment.yaml --validate=false
