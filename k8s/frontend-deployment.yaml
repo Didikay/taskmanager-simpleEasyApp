@@ -16,4 +16,4 @@ spec:
         - name: frontend
           image: didikay/task-manager-simpleeasyapp-frontend:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 80
